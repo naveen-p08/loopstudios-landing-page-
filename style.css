@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img,
+picture {
+    max-width: 100%;
+}
+
+:root {
+    /*    Colors    */
+    --text-white: 0 0% 100%;
+    --text-black: 0 0% 0%;
+    --text-gray: 0 0% 55%;
+    --text-dark-gray: 0 0% 41%;
+
+    /*  font family */
+    --ff-alata: 'Alata', sans-serif;
+    --ff-jsans: 'Josefin Sans', sans-serif;
+
+/*    Font Weight   */
+    --fw-300: 300;
+    --fw-400: 400;/*alata*/
+
+/*    Font Sizes    */
+    --fs-400: 1.5rem;
+    --fs-600: 4.8rem;
+    --fs-800: 3.2rem;
+    --fs-900: 7.2rem;
+
+}
+
+@media (max-width: 35em) {
+    :root {
+    /*    Font size and reset */
+        --fs-400: 1.8rem;
+        --fs-500: 2rem;
+        --fs-600: 4rem;
+        --fs-700: 4.8rem;
+        --fs-900: 5.2rem;
+    }
+}
+
+.container {
+    max-width: 115rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+.flex {
+    display: flex;
+    gap: var(--flex-gap, 2rem);
+}
+
+.space-bw {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: var(--grid-gap, 2rem);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+
+/*      Utility Classes     */
+
+/*text color*/
+.text-white {
+    color: hsl(var(--text-white));
+}
+
+.text-black {
+    color: hsl(var(--text-black));
+}
+
+.text-gray {
+    color: hsl(var(--text-gray));
+}
+
+.text-dark-gray {
+    color: hsl(var(--text-dark-gray));
+}
+
+/* background  */
+
+.bg-black {
+    background-color: hsl(var(--text-black));
+}
+
+/*  Font Family */
+
+.ff-alata {
+    font-family: var(--ff-alata);
+}
+
+.ff-jsans {
+    font-family: var(--ff-jsans);
+}
+
+/*  Font Weight */
+.fw-300 {
+    font-weight: var(--fw-300);
+}
+
+.fw-400 {
+     font-weight: var(--fw-400);
+ }
+
+/*      Font Sizes      */
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.letter-spaceing {
+    letter-spacing: 0.525rem;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+.mobile-img {
+    display: none;
+}
+
+
+@media (max-width: 34.99em) {
+    .mobile-img {
+        display: block;
+    }
+    .desktop-img {
+        display: none;
+    }
+    .mobile-toggle {
+        display: block;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 2rem;
+        aspect-ratio: 1;
+        background: url("images/icon-hamburger.svg") center no-repeat;
+    }
+}
+
