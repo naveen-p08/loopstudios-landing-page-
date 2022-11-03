@@ -179,6 +179,13 @@ picture {
 body a {
     position: relative;
     padding-bottom: 1rem;
+    outline: 1px solid transparent;
+    transition: outline-color 250ms ease-in-out,outline-offset 250ms ease-in-out;
+}
+
+body a:focus {
+    outline: 1px solid hsl(var(--text-white));
+    outline-offset: 4px;
 }
 
 .underline-link::after {
@@ -205,12 +212,12 @@ body a {
     width: 100%;
 }
 
-.overflow {
-    overflow: hidden;
-}
-
 
 @media (max-width: 34.99em) {
+
+    .overflow {
+        overflow: hidden;
+    }
 
     .mobile-img {
         display: block;
@@ -311,6 +318,9 @@ header {
     line-height: 1.7;
 }
 
+/*======================*/
+/*      Gallery    */
+
 .gallery {
     text-align: center;
     margin-bottom: 7rem;
@@ -342,6 +352,22 @@ header {
 
 .gallery figure {
     position: relative;
+}
+
+.gallery a{
+    cursor: pointer;
+}
+
+.gallery a:where(:hover, :focus) img {
+    opacity: 0.4;
+}
+
+.gallery a:focus {
+    outline: 1px solid hsl(var(--text-black));
+}
+
+.gallery a:where(:hover, :focus) figcaption {
+    color: hsl(var(--text-black));
 }
 
 .gallery figure figcaption {
