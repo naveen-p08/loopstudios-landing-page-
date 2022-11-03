@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Loopstudios landing page](https://github.com/root9259/loopstudios-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Loopstudios landing page](https://root9259.github.io/loopstudios-landing-page-/)
 
 ## My process
 
